@@ -99,7 +99,7 @@ resource "aws_instance" "web" {
     encrypted   = true
   }
 
-  user_data = file("${path.module}/user-data.sh")
+  user_data                   = file("${path.module}/user-data.sh")
   user_data_replace_on_change = true
 
   tags = merge(local.tags, { Name = "${var.project_name}-web" })
