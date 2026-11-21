@@ -73,7 +73,6 @@ terraform destroy
 
 Designed, deployed, and validated an AWS infrastructure environment using Terraform, including a custom VPC, multi-Availability-Zone public and private subnets, EC2 web hosting, security groups, and encrypted storage. Integrated GitHub Actions for automated Terraform formatting and validation. Successfully provisioned 11 AWS resources, verified deployment outputs, and performed infrastructure teardown using Terraform. Demonstrated infrastructure-as-code automation, AWS networking, CI/CD validation, and cost-conscious cloud resource management.
 
-## Verification checklist
 
 ## Verification checklist
 
