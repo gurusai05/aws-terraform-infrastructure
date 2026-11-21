@@ -2,7 +2,7 @@
 
 A reproducible, GitHub-ready infrastructure-as-code project demonstrating AWS VPC networking, subnet design, EC2 provisioning, security groups, and automated configuration validation and a deployment smoke test.
 
-> **Project status:** Implementation updated and local repository tests passed (3/3); shell syntax checks passed. Terraform CLI validation and AWS deployment have **not** been performed. GitHub Actions validation will run after pushing the repository. Do not describe this as a production deployment.
+> **Project status:** > Successfully validated and deployed to AWS in the `us-east-2` (Ohio) region on November 20, 2026. Terraform provisioned 11 infrastructure resources, including VPC networking and an EC2 web server. Deployment outputs were captured, and all 11 Terraform-managed resources were subsequently destroyed to prevent ongoing infrastructure costs. GitHub Actions Terraform validation passed. This is a demonstration project, not a production deployment.
 
 ## Architecture
 
@@ -71,16 +71,21 @@ terraform destroy
 
 ## Portfolio description
 
-Designed a reproducible AWS network and EC2 web-hosting environment with Terraform, including multi-AZ subnet layout, least-privilege SSH access controls, encrypted storage, and CI-based Terraform validation. Source implementation available; cloud deployment not yet verified.
+Designed, deployed, and validated an AWS infrastructure environment using Terraform, including a custom VPC, multi-Availability-Zone public and private subnets, EC2 web hosting, security groups, and encrypted storage. Integrated GitHub Actions for automated Terraform formatting and validation. Successfully provisioned 11 AWS resources, verified deployment outputs, and performed infrastructure teardown using Terraform. Demonstrated infrastructure-as-code automation, AWS networking, CI/CD validation, and cost-conscious cloud resource management.
+
+## Verification checklist
 
 ## Verification checklist
 
 - [x] Local Python repository tests (3 passing)
 - [x] Bash syntax check (`bash -n`)
-- [ ] GitHub Actions Terraform `fmt` and `validate` green
-- [ ] AWS `terraform plan` reviewed
-- [ ] AWS `terraform apply` succeeds
-- [ ] Live HTTP smoke test passes
-- [ ] `terraform destroy` completes and AWS billing checked
+- [x] GitHub Actions Terraform `fmt` and `validate` green
+- [x] AWS `terraform plan` reviewed
+- [x] AWS `terraform apply` succeeds
+- [x] AWS deployment outputs captured
+- [x] `terraform destroy` completes (11 resources destroyed)
+- [x] AWS billing checked ($0.00 estimated bill at time of verification)
+- [ ] Live HTTP smoke test passes (not independently confirmed)
 
-**Portfolio integrity:** Do not claim this infrastructure has been deployed or production-tested until those steps are completed. The project is a reference implementation, not a hardened production stack.
+**Portfolio integrity:** AWS deployment and infrastructure cleanup were successfully completed. Live HTTP smoke-test success has not been independently verified. This is a demonstration environment, not a hardened production deployment.
+
